@@ -89,9 +89,6 @@ def index():
 
     owner = User.query.filter_by(email=session['email']).first()
 
-    owner = User.query.filter_by(email=session['email']).first()
-
-
     if request.method == 'POST':
         task_name = request.form['task']
         new_task = Task(task_name, owner)
